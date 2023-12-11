@@ -8,6 +8,18 @@
 #include <dt-bindings/zmk/keys.h>
 
 / {
+    behaviors {
+        holdLayer: holdLayer {
+            compatible = "zmk,behavior-hold-tap";
+            label = "HOLDLAYER";
+            bindings = <&mo>, <&trans>;
+
+            #binding-cells = <2>;
+            hold-trigger-key-positions = <39>;
+            tapping-term-ms = <500>;
+        };
+    };
+
     keymap {
         compatible = "zmk,keymap";
 
